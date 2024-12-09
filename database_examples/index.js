@@ -1,8 +1,10 @@
 const express = require('express')
 const supabaseClient = require('@supabase/supabase-js')
+const bodyParser = require('body-parser')
 
 const app = express()
 const port = 3000
+app.use(bodyParser.json())
 app.use(express.static(__dirname + '/public'))
 
 const supabaseUrl = 'https://telaaoiyydexjcbnqhmx.supabase.co'
@@ -17,13 +19,39 @@ app.get('/customers', async (req, res) => {
         .select();
 
     console.log('Data Retrieved: ', data);
-    console.log('Error: ', error)
-    res.send(data);
+    if (error) {
+        console.log('Error: ', error)
+        res.send(error);
+    } else {
+        console.log("Successfully Retrieved Data")
+        res.send(data);
+    }
 })
 
-app.post('/customer', (req, res) => {
+app.post('/customer', async(req, res) => {
     console.log('Attempting to add Customer.')
-    res.send("Post complete")
+    console.log('Request', req.body)
+
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const userState = req.body.userState;
+
+    const {data, error} = await supabase
+        .from('customer')
+        .insert({
+            customer_first: firstName, 
+            customer_last: lastName,
+            customer_state: userState
+        })
+        .select();
+
+    if (error) {
+        console.log('Error: ', error)
+        res.send(error);
+    } else {
+        console.log("Successfully Retrieved Data")
+        res.send(data);
+    }
 })
 
 app.listen(port, () => {
