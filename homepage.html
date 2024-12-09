@@ -1,1 +1,41 @@
-homep
+<html>
+    <head>
+        <title>Weather App</title>
+        <script src="functionality.js" defer></script>
+        <link rel="stylesheet" href="functionality.css">
+    </head>
+    <body>
+        <header>
+            <h1>Weather App</h1>
+            <input type="text" id="search" placeholder="City or zip code">
+            <button onclick="searchWeather()">Search</button>
+        </header>
+        <nav id="nav">
+            <h1>INST377 Project</h1>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </nav>
+        <div id="main-content">
+            <div id="weather">
+            <h2>Location Name</h2>
+            <p>Temperature Now: <span id="temperature">--</span>°C</p>
+            <p>Hi/Low: <span id="hi">--</span>/<span id="low">--</span></p>
+            <p>Feels Like: <span id="feels_like">--</span>°C</p>
+            </div>
+            <div class="buttons">
+            <button onclick="fetchDetails('hourly')">Hourly</button>
+            <button onclick="fetchDetails('daily')">Daily</button>
+            <button onclick="fetchDetails('weekly')">Weekly</button>
+            </div>
+            <div id="nearby">
+            <h3>Nearby Locations:</h3>
+            <div class="nearby-location">Tokyo</div>
+            <div class="nearby-location">Russia</div>
+            <div class="nearby-location">Arlington</div>
+            <div class="nearby-location">Peru</div>
+            </div>
+        </div>
+    </body>
+</html>
