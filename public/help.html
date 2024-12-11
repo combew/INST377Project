@@ -37,7 +37,7 @@
             <div id="section2Right" class="flex-container-column">
                 <h2>What do you think about our website?</h2>
                 <p>Do you have any suggestions for our website? Perhaps highlight things you liked about it!<br>Use the form below to submit your comments, see what other users have said below.</p>
-                <form id="website-feedback-form" onsubmit="">
+                <form id="website-feedback-form" onsubmit="createFeedback(); return false">
                     <h3>Name:</h3>
                     <input type="text" id="name" placeholder="Ex: John Doe" required>
                     <h3>Enter your comments here:</h3>

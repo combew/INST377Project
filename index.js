@@ -11,6 +11,10 @@ const supabaseUrl = 'https://telaaoiyydexjcbnqhmx.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRlbGFhb2l5eWRleGpjYm5xaG14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM1MjY3ODksImV4cCI6MjA0OTEwMjc4OX0.qoQSokC1ihou8_4pqug8EHakeidhtKibhfilqkWtC6I'
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
 
+app.get('/', (req, res) => {
+    res.sendFile('public/help.html', {root: __dirname});
+})
+
 app.get('/feedback', async (req, res) => {
     console.log('Attempting to get all feedback.');
 
