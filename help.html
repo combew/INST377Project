@@ -27,17 +27,24 @@
         <!-- Section 2 -->
         <!-- This section is split up into a few parts -->
         <div id="section2" class="section flex-container-row">
-            <div id="section2Left">
-                <h1 id="current-temp">Current Temperature</h1>
-                <h3 id="temp-taken-time">Temperature taken at: </h3>
-                <h3 id="weather-icon"></h3>
-            </div>
-            <div id="section2Right" class="flex-container-column">
+            <div id="section2Left" class="flex-container-column">
                 <div class="secondary-weather-info">1</div>
                 <div class="secondary-weather-info">2</div>
                 <div class="secondary-weather-info">3</div>
                 <div class="secondary-weather-info">4</div>
                 <div class="secondary-weather-info">5</div>
+            </div>
+            <div id="section2Right" class="flex-container-column">
+                <h2>What do you think about our website?</h2>
+                <p>Do you have any suggestions for our website? Perhaps highlight things you liked about it!<br>Use the form below to submit your comments, see what other users have said below.</p>
+                <form id="website-feedback-form" onsubmit="">
+                    <h3>Name:</h3>
+                    <input type="text" id="name" placeholder="Ex: John Doe" required>
+                    <h3>Enter your comments here:</h3>
+                    <textarea id="feedback" name="feedback" rows="8" cols="75" placeholder="Enter Comments Here" required></textarea>
+                    <br><br>
+                    <input type="submit">
+                </form>
             </div>
         </div>
 

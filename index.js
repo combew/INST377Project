@@ -11,11 +11,11 @@ const supabaseUrl = 'https://telaaoiyydexjcbnqhmx.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRlbGFhb2l5eWRleGpjYm5xaG14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM1MjY3ODksImV4cCI6MjA0OTEwMjc4OX0.qoQSokC1ihou8_4pqug8EHakeidhtKibhfilqkWtC6I'
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
 
-app.get('/customers', async (req, res) => {
-    console.log('Attempting to get all customers.');
+app.get('/feedback', async (req, res) => {
+    console.log('Attempting to get all feedback.');
 
     const {data, error} = await supabase
-        .from('customer')
+        .from('feedback')
         .select();
 
     console.log('Data Retrieved: ', data);
@@ -28,20 +28,18 @@ app.get('/customers', async (req, res) => {
     }
 })
 
-app.post('/customer', async(req, res) => {
-    console.log('Attempting to add Customer.')
+app.post('/add', async(req, res) => {
+    console.log('Attempting to add feedback.')
     console.log('Request', req.body)
 
-    const firstName = req.body.firstName;
-    const lastName = req.body.lastName;
-    const userState = req.body.userState;
+    const name = req.body.name;
+    const feedback = req.body.feedback;
 
     const {data, error} = await supabase
-        .from('customer')
+        .from('feedback')
         .insert({
-            customer_first: firstName, 
-            customer_last: lastName,
-            customer_state: userState
+            name: name, 
+            feedback: feedback,
         })
         .select();
 
