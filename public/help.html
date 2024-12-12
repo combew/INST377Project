@@ -8,8 +8,8 @@
     <body>
         <!-- Navigation Bar -->
         <nav id="nav">
-            <h1>logo</h1>
-            <h2>Website Name</h2>
+            <img src="https://purepng.com/public/uploads/large/weather-forecast-symbol-v7o.png" height="100%">
+            <h2>Wicked Weather</h2>
             <ul>
                 <li><a href="homepage.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
@@ -20,19 +20,32 @@
         <!-- Main Content -->
 
         <!-- Section 1 -->
+        <!-- Site Features -->
+
         <div id="section1" class="section">
             <h1 id="locationName">Location Name</h1>
         </div>
 
         <!-- Section 2 -->
-        <!-- This section is split up into a few parts -->
+        <!-- Feedback Form -->
+
         <div id="section2" class="section flex-container-row">
             <div id="section2Left" class="flex-container-column">
-                <div class="secondary-weather-info">1</div>
-                <div class="secondary-weather-info">2</div>
-                <div class="secondary-weather-info">3</div>
-                <div class="secondary-weather-info">4</div>
-                <div class="secondary-weather-info">5</div>
+                <div id="search-feature" class="feature-section">
+                    <div class="feature-tab" onclick="displaySearching()">
+                        <h2>Searching for Weather</h2>
+                    </div>
+                </div>
+                <div id="hourly-feature" class="feature-section">
+                    <div class="feature-tab" onclick="displayHourly()">    
+                        <h2>Hourly Forecast</h2>
+                    </div>
+                </div>
+                <div id="detailed-feature" class="feature-section">
+                    <div class="feature-tab" onclick="displayDetailed()">    
+                        <h2>Detailed Weather Information</h2>
+                    </div>
+                </div>
             </div>
             <div id="section2Right" class="flex-container-column">
                 <h2>What do you think about our website?</h2>
@@ -48,6 +61,19 @@
             </div>
         </div>
 
+        <!-- Section 3, Displaying Feedback Table -->
+
+        <div id="section3">
+            <button id="tableButton" class="button-82-pushable" role="button" onclick="getFeedback()">
+                <span class="button-82-shadow"></span>
+                <span class="button-82-edge"></span>
+                <span class="button-82-front text">
+                  Show/Hide Table
+                </span>
+            </button>     
+            
+            <!-- Onclick will add stuff here -->
+        </div>
         
     </body>
 </html>
