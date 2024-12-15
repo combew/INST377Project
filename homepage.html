@@ -2,41 +2,43 @@
     <head>
         <title>Weather App</title>
         <script src="homepage.js" defer></script>
-        <link rel="stylesheet" href="functionality.css">
+        <link rel="stylesheet" href="homepage.css">
     </head>
+    
     <body>
-        <header>
-            <h1>Weather App</h1>
-            <input type="text" id="search" placeholder="City or zip code">
-            <button onclick="searchWeather()">Search</button>
-        </header>
+        
         <nav id="nav">
             <h1>logo</h1>
             <h2>Website Name</h2>
-              <ul>
+            <ul>
                 <li><a href="homepage.html">Home</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="help.html">Help</a></li>
-              </ul>
-          </nav>
+            </ul>
+        </nav>
+        
+        <input type="text" id="search" placeholder="Enter city or zip code">
+        <button id="searchButton">Search</button>
+
         <div id="main-content">
-            <div id="weather">
-            <h2>Location Name</h2>
-            <p>Temperature Now: <span id="temperature">--</span>°C</p>
-            <p>Hi/Low: <span id="hi">--</span>/<span id="low">--</span></p>
-            <p>Feels Like: <span id="feels_like">--</span>°C</p>
+            <!-- Current Weather -->
+            <div id="current-weather">
+                <h2 id="locationName">Location</h2>
+                <p>Temperature: <span id="temperature">--</span>°F</p>
+                <p>Feels Like: <span id="feelsLike">--</span>°F</p>
+                <p>Conditions: <span id="conditions">--</span></p>
             </div>
-            <div class="buttons">
-            <button onclick="fetchDetails('hourly')">Hourly</button>
-            <button onclick="fetchDetails('daily')">Daily</button>
-            <button onclick="fetchDetails('weekly')">Weekly</button>
+
+            <!-- Hourly Forecast -->
+            <div id="hourly-forecast">
+                <h3>Hourly Forecast</h3>
+                <div id="hourly-container"></div>
             </div>
-            <div id="nearby">
-            <h3>Nearby Locations:</h3>
-            <div class="nearby-location">Tokyo</div>
-            <div class="nearby-location">Russia</div>
-            <div class="nearby-location">Arlington</div>
-            <div class="nearby-location">Peru</div>
+
+            <!-- Daily Forecast -->
+            <div id="daily-forecast">
+                <h3>Daily Forecast</h3>
+                <div id="daily-container"></div>
             </div>
         </div>
     </body>
