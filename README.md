@@ -5,6 +5,7 @@ This project was made by Judah Kamadinata, Steven Nguyen, Hayden Kim, and Kibron
 
 # Description:
 Our project is a website with 3 pages that perform various JS library and API calls to a database server. This website targets the Chrome web browser.
+Use url https://inst-377-project-git-main-combews-projects.vercel.app/ to access it!
 
 # Developer Manual
 ## Installing Application and Dependencies
