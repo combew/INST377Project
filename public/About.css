@@ -1,3 +1,7 @@
+* {
+    font-family: sans-serif;
+}
+
 #nav {
     position: relative;
     height: 100px;
@@ -33,10 +37,10 @@
     margin: 20px auto; /* Centers the box horizontally and adds vertical spacing */
     background-color: #f9f9f9; /* Light gray background */
     padding: 20px; /* Adds internal spacing */
-    border: 2px solid black; /* Black border */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
     text-align: center; /* Center-aligns the text */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 #description-box h2 {
@@ -73,8 +77,8 @@
     padding: 20px;
     background-color: #7bc5d8;
     text-align: center;
-    border: 2px solid black; /* Black border */
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .box:first-child {

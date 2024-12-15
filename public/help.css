@@ -43,18 +43,31 @@
 
 #section2Left {
     flex-grow: 5;
-    border: 2px solid grey;
-}
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;}
 
 #section2Right {
-    border: 2px solid grey;
-    padding: 40px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
 }
 
 .feature-section {
     width: 100%;
-    border: 1px solid green;
-}
+    background-color: #fff;
+    padding: 8px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;}
 
 .feature-tab:hover {
     cursor: pointer;
